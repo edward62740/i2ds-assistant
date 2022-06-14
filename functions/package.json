@@ -1,6 +1,6 @@
 {
-  "name": "fcm-notifications-functions",
-  "description": "Send FCM notifications",
+  "name": "google-actions-functions",
+  "description": "Receive HTTPS request from dialogflow",
   "dependencies": {
     "es6-promise-pool": "^2.5.0",
     "firebase-admin": "^10.2.0",
