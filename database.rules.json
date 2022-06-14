@@ -1,6 +1,33 @@
 {
-  "rules": {
-    ".read": true,
-    ".write": true,
-  }
+   "rules":{
+      "boot":{
+         ".read":true,
+         ".write":true
+      },
+      "devices":{
+        ".read":true,
+          ".write":true
+         
+      },
+      "errors":{
+         ".read":true,
+         ".write":true
+      },
+      "info":{
+         ".read":true,
+         ".write":true
+      },
+      "notificationTokens":{
+         ".read":true,
+         ".write":true
+      },
+      "req":{
+         ".read":true,
+         ".write":true
+      },
+      "tag":{
+         ".read":true,
+         ".write":true
+      }
+   }
 }
