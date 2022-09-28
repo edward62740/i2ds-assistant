@@ -11,10 +11,11 @@ exports.I2DSgoogleAssistantIntegration = functions.https.onRequest(async (req, r
     .ref(`/devices`).once('value');
   let deviceSnapshot = await Promise.resolve(getDeviceInfoPromise);
   let devices = Object.keys(deviceSnapshot.val());
+  let devicesInfo = Object.values(deviceSnapshot.val());
   for (var i = 0; i < devices.length; i++) {
-    admin.database().ref('/req/send').update({ [devices[i].replace(/\D/g, '')]: requested_state[0] })
+    if (devicesInfo[i].hw == 138)
+      admin.database().ref('/req/send').update({ [devices[i].replace(/\D/g, '')]: requested_state[0] })
   }
-
   res.send({
     speech: "hello"
   });
